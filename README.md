@@ -1,4 +1,4 @@
-#[ADD_IMAGE]#
+![Jailhouse](https://wiki.lewmc.net/Wiki/JH-Banner.png)
 
 - 💾 **Download Jailhouse** - https://lewmc.net/plugin/jailhouse
 - 🔧 **View the JavaDocs** - https://lewmc.github.io/Jailhouse
