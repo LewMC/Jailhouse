@@ -1,4 +1,4 @@
-![Essence](https://cdn.modrinth.com/data/cached_images/1a9959eb6d98d5e50f561c021de086a8212cc7cc.png)
+#[ADD_IMAGE]#
 
 - 💾 **Download Jailhouse** - https://lewmc.net/plugin/jailhouse
 - 🔧 **View the JavaDocs** - https://lewmc.github.io/Jailhouse
