@@ -6,10 +6,16 @@ import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Main Jailhouse class.
+ */
 public final class Jailhouse extends JavaPlugin {
 
     private final LogUtil log = new LogUtil(this);
 
+    /**
+     * Main Jailhouse enable function.
+     */
     @Override
     public void onEnable() {
         this.log.info("");
