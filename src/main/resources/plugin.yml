@@ -7,3 +7,7 @@ description: Jailhouse is a free and easy to use Minecraft banning system.
 website: https://lewmc.net/plugin/jailhouse
 load: POSTWORLD
 folia-supported: true
+commands:
+  jailhouse:
+    description: Main command.
+    aliases: ['jail', 'jh']

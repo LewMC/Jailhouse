@@ -1,5 +1,6 @@
 package net.lewmc.jailhouse;
 
+import net.lewmc.jailhouse.commands.JailhouseCommand;
 import net.lewmc.jailhouse.utils.LogUtil;
 import net.lewmc.jailhouse.utils.UpdateUtil;
 import org.bstats.bukkit.Metrics;
@@ -43,6 +44,8 @@ public final class Jailhouse extends JavaPlugin {
         update.VersionCheck();
         update.UpdateConfig();
 
+        this.loadCommands();
+
         this.log.info("Startup completed.");
     }
 
@@ -51,6 +54,14 @@ public final class Jailhouse extends JavaPlugin {
      */
     private void initFileSystem() {
         saveDefaultConfig();
+        saveResource("bans.yml", false);
+    }
+
+    /**
+     * Loads commands.
+     */
+    public void loadCommands() {
+        this.getCommand("jailhouse").setExecutor(new JailhouseCommand(this));
     }
 
     @Override
