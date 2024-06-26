@@ -2,3 +2,8 @@ name: Jailhouse
 version: '${project.version}'
 main: net.lewmc.jailhouse.Jailhouse
 api-version: '1.20'
+author: LewMC
+description: Jailhouse is a free and easy to use Minecraft banning system.
+website: https://lewmc.net/plugin/jailhouse
+load: POSTWORLD
+folia-supported: true
