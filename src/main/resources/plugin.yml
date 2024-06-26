@@ -1,0 +1,4 @@
+name: Jailhouse
+version: '${project.version}'
+main: net.lewmc.jailhouse.Jailhouse
+api-version: '1.20'

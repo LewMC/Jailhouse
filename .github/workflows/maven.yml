@@ -1,0 +1,34 @@
+name: Maven Build
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository 📡
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21 🔧
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Build with Maven 🏗️
+        run: mvn -B package --file pom.xml
+
+      - name: Extract Version from pom.xml 📄
+        id: extract_version
+        run: echo "VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+
+      - name: Upload Plugin jar 📁
+        uses: actions/upload-artifact@v4
+        with:
+          name: jailhouse-${{ env.VERSION }}.jar
+          path: /home/runner/work/Jailhouse/Jailhouse/target/jailhouse-${{ env.VERSION }}.jar
+
